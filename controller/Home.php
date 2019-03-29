@@ -32,14 +32,10 @@ class Home
 
     public static function validator()
     { //验证器
-        $v = Flight::validator()->getInstance(['id' => '111']);
-        $v->rule('required', 'ids');
-
-        if ($v->validate()) {
-            echo "Yay! We're all good!";
-        } else {
-            Send::error($v->errors());
-        }
+        // $v = Flight::validator()->getInstance(['id' => '111']);
+        $v = (new HomeValidator())->setData(['id' => '111'])->validator();
+        
+        Send::success(['a' => 111]);
     }
 }
 

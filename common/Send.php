@@ -7,13 +7,25 @@ class Send {
             'message' => 'ok',
             'status' => 1
         ]);
+        exit;
     }
 
     public static function error($info = '出错了') {
+        $infoData = '';
+        if (is_array($info)) {
+            foreach($info as $v) {
+                $infoData = $v[0];
+                break;
+            }
+        } else {
+            $infoData = $info;
+        }
+
         Flight::json([
             'data' => [],
-            'info' => $info,
+            'info' => $infoData,
             'status' => 0
         ]);
+        exit;
     }
 }
