@@ -1,5 +1,7 @@
 <?php
+namespace common;
 
+use Flight;
 class Send {
     public static function success($data = []) {
         Flight::json([

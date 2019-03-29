@@ -1,5 +1,5 @@
 <?php
-
+namespace common;
 class MyRegister {
     public $config;
     public function __construct($config) {

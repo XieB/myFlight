@@ -1,6 +1,7 @@
 <?php
-
-class HomeModel {
+namespace model;
+use Flight;
+class Home {
 
     public function getStone() {
         return Flight::db()->select("stone", '*', [

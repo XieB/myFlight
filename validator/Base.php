@@ -1,6 +1,9 @@
 <?php
+namespace validator;
+use Flight;
+use common\Send;
 
-class BaseValidator {
+class Base {
     protected $v; //保存实例化对象
     
     public function setData($data) {
