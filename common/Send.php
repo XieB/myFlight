@@ -1,7 +1,7 @@
 <?php
 
 class Send {
-    static function success($data = []) {
+    public static function success($data = []) {
         Flight::json([
             'data' => $data,
             'message' => 'ok',
@@ -9,7 +9,7 @@ class Send {
         ]);
     }
 
-    static function error($info = '出错了') {
+    public static function error($info = '出错了') {
         Flight::json([
             'data' => [],
             'info' => $info,

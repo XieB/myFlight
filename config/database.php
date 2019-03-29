@@ -1,5 +1,4 @@
 <?php
-use Medoo\Medoo ;
 
 $dbConfig = [
     // required
@@ -34,4 +33,4 @@ $dbConfig = [
 	// ]
 ];
 
-Flight::register('db', 'Medoo', $dbConfig);
+Flight::register('db', 'Medoo\Medoo', [$dbConfig]);
