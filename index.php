@@ -5,11 +5,7 @@ require 'config/database.php'; //注册db Meddo类
 require 'config/validator.php'; //注册验证器类
 
 $pathList = [
-    // __DIR__ . '/common',
-    // __DIR__ . '/controller',
-    // __DIR__ . '/model',
-    // __DIR__ . '/validator',
-    __DIR__,
+    __DIR__. '/app',
 ];
 Flight::path($pathList); //添加自动加载路径,写在路由前面,公共类,控制器,数据库,验证器
 

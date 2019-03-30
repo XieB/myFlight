@@ -1,6 +1,6 @@
 <?php
 
-Flight::set('flight.views.path', 'views'); //模板路径，可自定义模板引擎
+Flight::set('flight.views.path', 'app/views'); //模板路径，可自定义模板引擎
 Flight::set('flight.log_errors', true); //打开错误日志
 
 Flight::before('json', function () { //跨域
